@@ -114,7 +114,7 @@ def fetchData(part, code, que):
 threadPool = []
 
 for part in range(0, 3):
-    for code in range(0, 10):
+    for code in range(0, 3000):
         while len(threadPool) >= CONST_MAXCONNECTION:
             threadPool = [ th for th in threadPool if th.is_alive() ]
             try:
